@@ -1,9 +1,9 @@
-// /* Change document background color to silver 
-// Change the font color for h1 title tag to green
-// Change the font case for h3 title tags to uppercase
-// Add one more fruit to the fruits list
-// Add one more vegetable to the vegetables list
-//  */
+/* Change document background color to silver 
+Change the font color for h1 title tag to green
+Change the font case for h3 title tags to uppercase
+Add one more fruit to the fruits list
+Add one more vegetable to the vegetables list
+ */
 
 
 
@@ -19,7 +19,7 @@ const h3Tags = document.querySelectorAll('h3')
 
 // /* Change document background color to silver 
 
-doc.style.backgroundColor = '#d1fbfb';
+doc.style.backgroundColor = 'white';
 
 // Change the font color for h1 title tag to green
 title.style.color = 'green';
@@ -50,15 +50,18 @@ categoryContainer.forEach((category) => {
    category.style.border = 'solid 2px';
    category.style.borderRadius = '0.5em';
    category.style.padding = '3em';
-   category.style.backgroundColor = '#BDF1C7';
+   category.style.backgroundColor = '#063B00';
+   category.style.color = 'white'
 
 });
 
 
 
 // Add a new fruit: Apple
-const apple = document.createElement('p');
-apple.textContent = 'Apples';
+const newFruitItem = document.createElement('li');
+
+const appleFruit = document.createElement('p');
+appleFruit.textContent = 'Apples';
 
 const appleContainer = document.createElement('div');
 appleContainer.className = 'categoryContainer';
@@ -67,7 +70,9 @@ appleContainer.className = 'categoryContainer';
    appleContainer.style.borderRadius = '0.5em';
    appleContainer.style.padding = '2.5em';
    appleContainer.style.backgroundColor = '#BDF1C7';
-      appleContainer.style.height = '25em';
+   appleContainer.style.height = '25em';
+   appleContainer.style.backgroundColor = '#063B00';
+   appleContainer.style.color = 'white'
 
 
 
@@ -90,27 +95,29 @@ appleQty.innerHTML = '<p>Quantity</p><p>kgs</p>';
 appleQty.style.display = 'flex'
 appleQty.style.justifyContent= 'space-between'
 
-appleContainer.append( apple,appleImg, applePrice, appleQty);
+appleContainer.append( appleFruit,appleImg, applePrice, appleQty);
 newFruitItem.appendChild(appleContainer);
 fruits.appendChild(newFruitItem);
-
 
 // Add a new vegetable: Carrot
 const newVegItem = document.createElement('li');
 
-const carrot= document.createElement('p');
-carrot.textContent = 'Carrots';
+const carrotFruit = document.createElement('p');
+carrotFruit.textContent = 'Carrots';
 
 const carrotContainer = document.createElement('div');
 carrotContainer.className = 'categoryContainer';
 
 
 
-carrotContainer.style.border = 'solid 2px';
-carrotContainer.style.borderRadius = '0.5em';
-carrotContainer.style.padding = '3em';
-carrotContainer.style.backgroundColor = '#BDF1C7';
-carrotContainer.style.height = '25em';
+
+   carrotContainer.style.border = 'solid 2px';
+   carrotContainer.style.borderRadius = '0.5em';
+   carrotContainer.style.padding = '3em';
+   carrotContainer.style.backgroundColor = '#BDF1C7';
+    carrotContainer.style.height = '25em';
+     carrotContainer.style.backgroundColor = '#063B00';
+   carrotContainer.style.color = 'white'
 
 const carrotImg = new Image();
 carrotImg.src = 'https://i.pinimg.com/736x/b0/68/6e/b0686e954482395d6ffb75fc2f6c94de.jpg';
@@ -135,7 +142,7 @@ carrotQty.style.display = 'flex'
 carrotQty.style.justifyContent= 'space-between'
 
 
-carrotContainer.append(carrot, carrotImg, carrotPrice, carrotQty);
+carrotContainer.append(carrotFruit, carrotImg, carrotPrice, carrotQty);
 newVegItem.appendChild(carrotContainer);
 vegetables.appendChild(newVegItem);
 
